@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+/*
 // TODO: Consider deleting this function, since it's not used.
 async function ascertainSubject(textToExamine) {
   // Try to extract the subject from the current conversation state.
@@ -49,6 +49,7 @@ async function ascertainSubject(textToExamine) {
   console.log("SUBJECT:" + subject);
   return subject;
 }
+
 
 // TODO: Make this work more consistently
 export async function correctStandardLanguage(textToCorrect, lang) {
@@ -90,6 +91,7 @@ export async function correctStandardLanguage(textToCorrect, lang) {
   }
   return corrected;
 }
+*/
 
 export async function composeQuestionFromConversation(conversationText) {
   // Try to create a complete question from the current conversation state.
@@ -102,7 +104,7 @@ export async function composeQuestionFromConversation(conversationText) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      convText: prompt + conversationText + "\n\nQuestion:",
+      convText: /*prompt + */conversationText + "\n\nQuestion:",
       useCustomPrompt: false,
       composeQuestion: true
     })
